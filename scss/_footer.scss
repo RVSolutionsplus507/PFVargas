@@ -8,12 +8,13 @@
     p {
         @include hover-effect;
         cursor: pointer;
-        text-decoration: none;
+        
     }
 }
     p.parrafos {
         &:hover {
             animation: change-color 1s infinite;
+            text-decoration: none;
         }
     }
 
