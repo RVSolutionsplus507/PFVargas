@@ -1,12 +1,20 @@
 .texto {
     color: $custom-color;
-    font-weight: bold  ;
-}
-
-.consultores-title {
-    @each $property, $value in $custom-styles {
-        #{$property}: $value;
+    font-weight: bold;
+    
+    .consultores-title {
+        @each $property, $value in $custom-styles {
+            #{$property}: $value;
+        }
     }
 }
-
+.consultor-img {
+    img {
+        width: 100%; 
+        height: auto;
+        margin-bottom: 10px;
+        object-fit: cover;
+        aspect-ratio: 16/9; 
+    }
+}
 
