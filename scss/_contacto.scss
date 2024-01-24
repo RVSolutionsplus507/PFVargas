@@ -1,0 +1,9 @@
+$primary-color: #ffffff;
+h3 {
+    color: $custom-color;
+}
+
+.form-control {
+    @include color-border;
+}
+

@@ -1,0 +1,23 @@
+{
+  "name": "sandalomagico",
+  "version": "1.0.0",
+  "description": "Productos Swiss Just",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RVSolutionsplus507/PreEntrega2Vargas.git"
+  },
+  "keywords": [
+    "SwissJust",
+    "SandaloMagico"
+  ],
+  "author": "Roberto J. Vargas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RVSolutionsplus507/PreEntrega2Vargas/issues"
+  },
+  "homepage": "https://github.com/RVSolutionsplus507/PreEntrega2Vargas#readme"
+}

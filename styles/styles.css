@@ -1,172 +1,282 @@
-/*Estilos Generales*/
+/* Estilos Generales */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-}
-section {
-    margin-bottom: 100px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
 }
 
-/* Inicio */
+section {
+  margin-bottom: 100px;
+}
+
 .navbar-brand img {
-    width: 150px;
-    height: auto;
+  width: 150px;
+  height: auto;
 }
 
 .acercasandalo img {
-    width: 300px;
-    height: auto;
-    border-radius: 20px;
+  width: 300px;
+  height: auto;
+  border-radius: 20px;
 }
 
-/* Catálogo */
-.catalogo .catalogocontenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+.nav-link {
+  transition: transform 0.3s ease-in-out;
+}
+.nav-link:hover {
+  transform: scale(1.1);
+  border-radius: rgb(149, 74, 149);
 }
 
-.catalogologo h2,
-.catalogodescarga h2,
-.servicios .titulo h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
+.input-group .form-control {
+  color: rgb(149, 74, 149);
+}
+.input-group .form-control:focus {
+  box-shadow: none;
+  border: 1px solid rgb(149, 74, 149);
+}
+.input-group .form-control:hover {
+  border: 1px solid rgb(149, 74, 149);
+}
+.input-group .btn-primary {
+  background-color: rgb(149, 74, 149);
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
-.catalogologo img,
-.catalogodescarga button,
-.serviciolist img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.footer-text h3 {
+  color: rgb(149, 74, 149);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-.serviciolist h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
+.footer-text p {
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.footer-text p:hover {
+  transform: scale(1.1);
+  border-radius: rgb(149, 74, 149);
+}
+.footer-text p.parrafos:hover {
+  animation: change-color 1s infinite;
 }
 
-.serviciolist p {
-    color: #666;
-    margin-bottom: 10px;
+@keyframes change-color {
+  0% {
+    color: initial;
+  }
+  100% {
+    color: rgb(149, 74, 149);
+    font-weight: bold;
+  }
+}
+.titulo {
+  color: rgb(149, 74, 149);
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-/* Ofertas */
-
-main .oferta-card {
-    padding: 20px;
-    background-color: #f5f5f5; 
-    border-radius: 10px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-    margin-bottom: 20px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 50%; 
-    margin: 0 auto; 
-    margin-top: 20px;
+.btn.btn-primary {
+  background-color: rgb(149, 74, 149);
+  border: none;
+}
+.btn.btn-primary:focus {
+  box-shadow: none;
+  border: 1px solid rgb(149, 74, 149);
+}
+.btn.btn-primary:hover {
+  border: 1px solid rgb(149, 74, 149);
+  animation: buttonHoverAnimation 0.3s ease-in;
 }
 
-main .oferta-title {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-    text-align: center;
+@keyframes buttonHoverAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.card img {
+  height: 250px;
 }
 
-main .oferta-image {
-    display: flex;
-    justify-content: center;
-    padding: 10px;
+.texto {
+  color: rgb(149, 74, 149);
+  font-weight: bold;
 }
 
-main .oferta-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    align-self: center;
+.consultores-title {
+  color: rgb(149, 74, 149);
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
-main .oferta-button {
-    width: 70px;
-    padding: 5px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    align-self: flex-end;
+.catalogo-container section {
+  margin-bottom: 20px;
+}
+.catalogo-container section .catalogologo img {
+  width: 100%;
+  height: auto;
+}
+.catalogo-container section .catalogodescarga {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.catalogo-container section .catalogodescarga .catalogodescarga-titulo {
+  color: rgb(149, 74, 149);
+}
+.catalogo-container section .catalogodescarga .catalogodescarga-boton {
+  background-color: rgb(149, 74, 149);
+  color: white;
+  padding: 10px 20px;
+  margin-bottom: 50px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.catalogo-container section .servicios-titulo h2 {
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.catalogo-container section .serviciolista {
+  width: 50;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgb(149, 74, 149);
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+.catalogo-container section .serviciolista .serviciolista-image {
+  width: 100%;
+  margin-bottom: 10px;
+  object-fit: cover;
+  aspect-ratio: 16/9;
+}
+.catalogo-container section .serviciolista .serviciolista-titulo {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .catalogo-container section .serviciolista {
+    margin-left: 400px;
+    margin-right: 400px;
+  }
 }
 
 main .ofertacontenedor {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+main .ofertacontenedor .oferta-card {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+main .ofertacontenedor .oferta-card .oferta-title {
+  font-size: 24px;
+  color: rgb(149, 74, 149);
+  margin-bottom: 10px;
+  text-align: center;
+}
+main .ofertacontenedor .oferta-card .oferta-image {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+main .ofertacontenedor .oferta-card .oferta-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  align-self: center;
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+main .ofertacontenedor .oferta-card .oferta-button {
+  width: 70px;
+  padding: 5px;
+  background-color: rgb(149, 74, 149);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  align-self: flex-end;
 }
 
-
-/* Catálogo */
-.catalogo-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+h3 {
+  color: rgb(149, 74, 149);
 }
 
-.catalogologo img,
-
-.serviciolista img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.form-control {
+  color: rgb(149, 74, 149);
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 1px solid rgb(149, 74, 149);
+}
+.form-control:hover {
+  border: 1px solid rgb(149, 74, 149);
 }
 
-.catalogodescarga button {
-    width: 50%;
-    padding: 10px;
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.catalogodescarga-titulo,
-.servicios-titulo,
-.serviciolista-titulo {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 10px;
-}
-
-.serviciolista {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.serviciolista li {
-    margin-bottom: 20px;
-}
-
-.serviciolista h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.serviciolista p {
-    color: #666;
-    margin-bottom: 10px;
-}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,27 @@
+.footer-text h3 {
+    @each $property, $value in $custom-styles {
+        #{$property}: $value;
+    }
+}
+.footer-text {
+    p {
+        @include hover-effect;
+        cursor: pointer;
+    }
+    p.parrafos {
+        &:hover {
+            animation: change-color 1s infinite;
+        }
+    }
+}
+
+@keyframes change-color {
+    0% {
+        color: initial;
+    }
+    100% {
+        color: $custom-color;
+        font-weight: bold;
+    }
+}
+

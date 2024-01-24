@@ -1,0 +1,81 @@
+$primary-color: black;
+$catalogo-images: (
+catalogo: "../assets/catalogo.jpg",
+serviciolista: "",
+);
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin card {
+    width: 50;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $custom-color;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    
+    .serviciolista-image {
+        width: 100%; 
+        margin-bottom: 10px;
+        object-fit: cover;
+        aspect-ratio: 16/9; 
+    }
+    
+    .serviciolista-titulo {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+}
+
+.catalogo-container {
+    section {
+        margin-bottom: 20px;
+        
+        .catalogologo {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        
+        .catalogodescarga {
+            @include flex-center;
+            flex-direction: column;
+            .catalogodescarga-titulo {
+                color: $custom-color;
+            }
+            
+            .catalogodescarga-boton {
+                background-color: $custom-color;
+                color: white;
+                padding: 10px 20px;
+                margin-bottom: 50px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        }
+        
+        .servicios-titulo h2 {
+            color: $primary-color;
+            @include flex-center;
+        }
+        
+        .serviciolista {
+            @include card;
+            margin-bottom: 30px;
+            
+            @media (min-width: 768px) {
+                margin-left: 400px;
+                margin-right: 400px;
+            }
+        }
+    }
+}

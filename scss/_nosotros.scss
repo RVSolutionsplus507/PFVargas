@@ -1,0 +1,12 @@
+.texto {
+    color: $custom-color;
+    font-weight: bold  ;
+}
+
+.consultores-title {
+    @each $property, $value in $custom-styles {
+        #{$property}: $value;
+    }
+}
+
+

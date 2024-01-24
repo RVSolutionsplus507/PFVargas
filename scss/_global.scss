@@ -1,0 +1,48 @@
+/* Estilos Generales */
+$custom-color: rgb(149, 74, 149);
+$custom-styles: (
+    color: $custom-color,
+    font-size: 1.5rem,
+    font-weight: 700,
+    text-align: center,
+    margin-bottom: 2rem
+);
+
+@mixin hover-effect {
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+        transform: scale(1.1);
+        border-radius: rgb(149, 74, 149);
+    }
+}
+@mixin color-border {
+    color: $custom-color;
+
+    &:focus {
+        box-shadow: none;
+        border: 1px solid $custom-color;
+    }
+
+    &:hover {
+        border: 1px solid $custom-color;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+section {
+    margin-bottom: 100px;
+}
+

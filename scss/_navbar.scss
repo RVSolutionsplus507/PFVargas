@@ -1,0 +1,48 @@
+$navbar-brand-img-width: 150px;
+$acercasandalo-img-width: 300px;
+$border-radius: 20px;
+
+@mixin img-styles($width, $height, $border-radius: null) {
+    width: $width;
+    height: $height;
+    
+    @if $border-radius {
+        border-radius: $border-radius;
+    }
+}
+
+.navbar-brand img {
+    @include img-styles($navbar-brand-img-width, auto);
+}
+
+.acercasandalo img {
+    @include img-styles($acercasandalo-img-width, auto, $border-radius);
+}
+
+.nav-link {
+    @include hover-effect;
+}
+
+.input-group {
+    .form-control {
+        @include color-border;
+    }
+
+    .btn-primary {
+        background-color: $custom-color;
+        color: white;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+    }
+        
+
+    @keyframes shake {
+        0% { transform: translateX(0); }
+        25% { transform: translateX(-5px); }
+        50% { transform: translateX(5px); }
+        75% { transform: translateX(-5px); }
+        100% { transform: translateX(0); }
+    }
+}
